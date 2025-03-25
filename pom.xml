@@ -14,15 +14,17 @@
 
 	</properties>
 
+	</properties>
+
 	<distributionManagement>
 		 <snapshotRepository>
 		    <id>NexusRepo</id>
-		    <url>http://ec2-44-202-247-118.compute-1.amazonaws.com:8081/repository/batch14-repo-snapshots/</url>
+		    <url>http://3.88.2.11:8081/repository/priya-repo-snapshot/</url>
 		 </snapshotRepository>
 		
 		<repository>
 		    <id>NexusRepo</id>
-		    <url>http://ec2-44-202-247-118.compute-1.amazonaws.com:8081/repository/batch14-repo-release/</url>
+		    <url>http://3.88.2.11:8081/repository/priya-repo-release/</url>
 		</repository>
   	</distributionManagement>
 
