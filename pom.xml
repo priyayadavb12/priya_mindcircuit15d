@@ -1,6 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
@@ -8,27 +9,23 @@
     <version>1.0.0</version>
     <packaging>war</packaging>
 
-	<properties>
-		<docker.image.prefix>kammana</docker.image.prefix>
-		<sonar.host.url>http://3.83.18.215:9000/</sonar.host.url>
+    <properties>
+        <docker.image.prefix>kammana</docker.image.prefix>
+        <sonar.host.url>http://3.83.18.215:9000/</sonar.host.url>
+    </properties> <!-- This is the correct closing tag for the properties -->
 
-	</properties>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>NexusRepo</id>
+            <url>http://3.88.2.11:8081/repository/priya-repo-snapshot/</url>
+        </snapshotRepository>
+        
+        <repository>
+            <id>NexusRepo</id>
+            <url>http://3.88.2.11:8081/repository/priya-repo-release/</url>
+        </repository>
+    </distributionManagement>
 
-	</properties>
-
-	<distributionManagement>
-		 <snapshotRepository>
-		    <id>NexusRepo</id>
-		    <url>http://3.88.2.11:8081/repository/priya-repo-snapshot/</url>
-		 </snapshotRepository>
-		
-		<repository>
-		    <id>NexusRepo</id>
-		    <url>http://3.88.2.11:8081/repository/priya-repo-release/</url>
-		</repository>
-  	</distributionManagement>
-
-    
     <build>
         <plugins>
             <plugin>
@@ -42,4 +39,3 @@
         </plugins>
     </build>
 </project>
-
