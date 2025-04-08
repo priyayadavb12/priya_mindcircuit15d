@@ -10,7 +10,7 @@ pipeline {
         stage('CLONE GITHUB CODE') {
             steps {
                 echo 'In this stage code will be clone'
-				git branch: 'main', url: 'https://github.com/devopstraininghub/mindcircuit15d.git'
+				git branch: 'main', url: 'https://github.com/priyayadavb12/priya_mindcircuit15d.git'
 				
 				}
         }
@@ -22,8 +22,8 @@ pipeline {
                 sh 'ls -ltrh'
                 
                 sh ''' mvn sonar:sonar \\
-                      -Dsonar.host.url=http://ec2-18-234-233-210.compute-1.amazonaws.com:9000 \\
-                      -Dsonar.login=squ_fb5fdb469f3cbfe23a88554ae7cd3ba7e3c29263'''
+                      -Dsonar.host.url=http://ec2-54-158-235-182.compute-1.amazonaws.com:9000/ \\
+                      -Dsonar.login=squ_274503464deeae30d89bd0348ef7053a9af2c6f5'''
             }
     	}
 		
